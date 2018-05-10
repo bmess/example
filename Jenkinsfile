@@ -1,7 +1,10 @@
-#!/usr/bin/env python3
-
-def add_two(x, y):
-	
-
-def main():
-	
+pipeline {
+  agent any
+  stages {
+    stage('test') {
+      steps {
+        sh 'python -m pytest -v --junit-file=junit.xml'
+      }
+    }
+  }
+}
