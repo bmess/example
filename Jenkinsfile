@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'python -m pytest -v --junit-file=junit.xml'
+        sh 'python -m pytest -v --junitxml=junit.xml'
+        junit 'junit.xml'
       }
     }
   }
