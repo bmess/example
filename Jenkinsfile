@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('test') {
       steps {
-        sh 'sh "python -m pytest -v --junit-file=junit.xml'
+        sh 'python -m pytest -v --junit-file=junit.xml'
       }
     }
   }
